@@ -6,7 +6,8 @@ A Clojure library designed to print out an ASCII diamond
 
 Prequisites: Requires leiningen to be installed on your system.
 
+Run with
 ./go.sh run E
 
-run tests with
+Run tests with
 ./go.sh test
