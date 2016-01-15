@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 if ! [ -x "$(command -v lein)" ]; then
-    echo 'Please install leiningen from http://leiningen.org/'
+    echo 'Please run "brew install leiningen" to install leiningen on your machine'
     exit
 fi
 
