@@ -77,10 +77,10 @@
     (is (true? (valid-args? ["a"])))
     (is (true? (valid-args? ["z"]))))
   (testing "should not accept non alphabetic arguments"
-    (is (false? (valid-args? '["1"])))
-    (is (false? (valid-args? '["$"]))))
+    (is (false? (valid-args? ["1"])))
+    (is (false? (valid-args? ["$"]))))
   (testing "should not accept multialphabet arguments"
-    (is (false? (valid-args? '["AA"])))
-    (is (false? (valid-args? '["Zz"]))))
+    (is (false? (valid-args? ["AA"])))
+    (is (false? (valid-args? ["Zz"]))))
   (testing "should not accept multiple arguments"
-    (is (false? (valid-args? '("A" "B"))))))
+    (is (false? (valid-args? ["A" "B"])))))
