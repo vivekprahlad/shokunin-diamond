@@ -3,16 +3,14 @@
 
 (defn- diamond-seq [c]
   "Generates a sequence of characters from A to the supplied character to A"
-  (let [y (int c)
-        a-to-character-seq (range (int \A) y)]
-    (map char (concat a-to-character-seq [y] (reverse a-to-character-seq)))))
+  (let [x (int c)
+        a-to-character-seq (range (int \A) x)]
+    (map char (concat a-to-character-seq [x] (reverse a-to-character-seq)))))
 
 (defn- diamond-line [max-char c]
   (let [padding (clojure.string/join (repeat (dec (* 2 (- (int c) (int \A)))) \space))
         margin (clojure.string/join (repeat (- (int max-char) (int c)) \space))]
-    (if (= \A c)
-      (str margin "A")
-      (str margin c padding c))))
+    (clojure.string/replace (str margin c padding c) "AA" "A")))
 
 (defn diamond-lines [c]
   (let [character (Character/toUpperCase c)]
